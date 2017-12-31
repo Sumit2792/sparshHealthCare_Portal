@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  	<!--  enduser table mapping --> 
+    <class name="com.healthCare.domainModal.enduser" table="enduser" catalog="healthCare">
+        <id name="enduser_id" column="enduser_id" type="java.lang.Long" />
+        <property name="username" column="username" type="string" not-null="true" />
+        <property name="email" column="email" type="string" not-null="true" />
+        <property name="firstname" column="firstname" type="string" not-null="true" />
+        <property name="lastname" column="lastname" type="string" not-null="true" />
+        <property name="password" column="password" type="string" not-null="true" />
+        <property name="confirm_password" column="confirm_password" type="string" not-null="true" />
+        <property name="address" column="address" type="string" not-null="true" />
+        <property name="contact_no" column="contact_no" type="int" not-null="true" />
+    </class>
+    
+  	<!--  invoice table mapping --> 
+    <class name="com.healthCare.domainModal.invoice" table="invoice" catalog="healthCare">
+        <id name="invoice_id" column="invoice_id" type="java.lang.Long" />
+        <property name="order_id" column="order_id" type="int" not-null="true" />
+        <property name="quantity" column="quantity" type="double" not-null="true" />
+        <property name="free_Quantity" column="free_Quantity" type="double" not-null="true" />
+        <property name="total_Quantity" column="total_Quantity" type="double" not-null="true" />
+        <property name="tax" column="tax" type="double" not-null="true" />
+        <property name="packing" column="packing" type="string" not-null="true" />
+        <property name="batch_no" column="batch_no" type="string" not-null="true" />
+        <property name="mrp" column="mrp" type="double" not-null="true" />
+        <property name="sale_value" column="sale_value" type="double" not-null="true" />
+        <property name="discount_allowed" column="discount_allowed" type="double" not-null="true" />
+        <property name="particular_amount" column="particular_amount" type="double" not-null="true" />
+        <property name="total_gross_amount" column="total_gross_amount" type="double" not-null="true" />
+        <property name="total_mrp_value" column="total_mrp_value" type="double" not-null="true" />
+    </class>
+    
+  	<!--  license table mapping --> 
+    <class name="com.healthCare.domainModal.license" table="license" catalog="healthCare">
+        <id name="license_id" column="license_id" type="java.lang.Long" />
+        <property name="site_id" column="site_id" type="int" not-null="true" />
+        <property name="site_license_noA" column="site_license_noA" type="string" not-null="true" />
+        <property name="site_license_noB" column="site_license_noB" type="string" not-null="true" />
+        <property name="license_expires_on" column="license_expires_on" type="date" not-null="true" />
+    </class>
+    
+  	<!--  order_details table mapping --> 
+    <class name="com.healthCare.domainModal.order_details" table="order_details" catalog="healthCare">
+        <id name="order_id" column="order_id" type="java.lang.Long" />
+        <property name="site_id" column="site_id" type="int" not-null="true" />
+        <property name="order_date" column="order_date" type="date" not-null="true" />
+    </class>
+    
+  	<!--  product table mapping --> 
+    <class name="com.healthCare.domainModal.product" table="product" catalog="healthCare">
+        <id name="product_id" column="product_id" type="java.lang.Long" />
+        <property name="product_name" column="product_name" type="string" not-null="true" />
+        <property name="batch_no" column="batch_no" type="string" not-null="true" />
+        <property name="manufacturing_date" column="manufacturing_date" type="date" not-null="true" />
+        <property name="no_of_box" column="no_of_box" type="int" not-null="true" />
+        <property name="no_of_strip_in_box" column="no_of_strip_in_box" type="int" not-null="true" />
+        <property name="total_strips" column="total_strips" type="int" not-null="true" />
+        <property name="expiary_date" column="expiary_date" type="date" not-null="true" />
+        <property name="in_stock" column="in_stock" type="boolean" not-null="true" />
+        <property name="in_stock_count_value" column="in_stock_count_value" type="int" not-null="true" />
+        <property name="strip_mrp" column="strip_mrp" type="double" not-null="true" />
+        <property name="box_mrp" column="box_mrp" type="double" not-null="true" />
+        <property name="sale_value" column="sale_value" type="double" not-null="true" />
+        <property name="composition" column="composition" type="string" not-null="true" />
+        <property name="strength" column="strength" type="string" not-null="true" />
+    </class>
+    
+  	<!--  profit_sale_monthly table mapping --> 
+    <class name="com.healthCare.domainModal.profit_sale_monthly" table="profit_sale_monthly" catalog="healthCare">
+        <id name="invoice_id" column="invoice_id" type="java.lang.Long" />
+        <property name="month_year" column="month_year" type="string" not-null="true" />
+        <property name="asset_value_monthly" column="asset_value_monthly" type="double" not-null="true" />
+        <property name="sale_value_monthly" column="sale_value_monthly" type="double" not-null="true" />
+        <property name="expense_value_monthly" column="expense_value_monthly" type="double" not-null="true" />
+        <property name="final_asset_value_monthly" column="final_asset_value_monthly" type="double" not-null="true" />
+        <property name="profit_value_monthly" column="profit_value_monthly" type="double" not-null="true" />
+        <property name="balance_sheet_monthly" column="balance_sheet_monthly" type="double" not-null="true" />
+    </class>
+    
+  	<!--  profit_sale_yearly table mapping --> 
+    <class name="com.healthCare.domainModal.profit_sale_yearly" table="profit_sale_yearly" catalog="healthCare">
+        <id name="invoice_id" column="invoice_id" type="java.lang.Long" />
+        <property name="financial_year" column="month_year" type="financial_year" not-null="true" />
+        <property name="asset_value_yearly" column="asset_value_yearly" type="double" not-null="true" />
+        <property name="sale_value_yearly" column="sale_value_yearly" type="double" not-null="true" />
+        <property name="expense_value_yearly" column="expense_value_yearly" type="double" not-null="true" />
+        <property name="final_asset_value_yearly" column="final_asset_value_yearly" type="double" not-null="true" />
+        <property name="profit_value_yearly" column="profit_value_yearly" type="double" not-null="true" />
+        <property name="balance_sheet_yearly" column="balance_sheet_yearly" type="double" not-null="true" />
+    </class>
+    
+  	<!--  role table mapping --> 
+    <class name="com.healthCare.domainModal.role" table="role" catalog="healthCare">
+        <id name="role_id" column="role_id" type="java.lang.Long" />
+        <property name="role" column="role" type="string" not-null="true" />
+    </class>
+    
+  	<!--  site table mapping --> 
+    <class name="com.healthCare.domainModal.site" table="site" catalog="healthCare">
+        <id name="site_id" column="site_id" type="java.lang.Long" />
+        <property name="enduser_id" column="enduser_id" type="int" not-null="true" />
+        <property name="site_name" column="site_name" type="string" not-null="true" />
+        <property name="site_license_noA" column="site_license_noA" type="string" not-null="true" />
+        <property name="site_license_noB" column="site_license_noB" type="string" not-null="true" />
+        <property name="license_expires_on" column="license_expires_on" type="date" not-null="true" />
+        <property name="address" column="address" type="string" not-null="true" />
+    </class>
+    
+  	<!--  total_amount table mapping --> 
+    <class name="com.healthCare.domainModal.total_amount" table="total_amount" catalog="healthCare">
+        <id name="enduser_id" column="enduser_id" type="java.lang.Long" />
+        <property name="username" column="username" type="string" not-null="true" />
+        <property name="email" column="email" type="string" not-null="true" />
+        <property name="firstname" column="firstname" type="string" not-null="true" />
+        <property name="lastname" column="lastname" type="string" not-null="true" />
+        <property name="password" column="password" type="string" not-null="true" />
+        <property name="confirm_password" column="confirm_password" type="string" not-null="true" />
+        <property name="address" column="address" type="string" not-null="true" />
+        <property name="contact_no" column="contact_no" type="int" not-null="true" />
+    </class>
+    
+  	<!--  user_role table mapping --> 
+    <class name="com.healthCare.domainModal.user_role" table="user_role" catalog="healthCare">
+        <id name="enduser_id" column="enduser_id" type="java.lang.Long" />
+        <property name="role_id" column="role_id" type="int" not-null="true" />
+    </class>
+</hibernate-mapping>
