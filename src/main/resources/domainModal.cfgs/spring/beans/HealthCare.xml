@@ -2,15 +2,125 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<!-- Stock business object -->
-   <bean id="stockBo" class="com.mkyong.stock.bo.impl.StockBoImpl" >
-   		<property name="stockDao" ref="stockDao" />
+	<!-- healthCare Enduser object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.enduserDOImpl" >
+   		<property name="enduserDO" ref="enduserDO" />
    </bean>
  
-   <!-- Stock Data Access Object -->
-   <bean id="stockDao" class="com.mkyong.stock.dao.impl.StockDaoImpl" >
+   <!-- healthCare Enduser Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.enduserDOImpl" >
    		<property name="sessionFactory" ref="sessionFactory"></property>
    </bean>
    
+   
+   <!-- healthCare Invoice object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.invoiceDOImpl" >
+   		<property name="invoiceDO" ref="invoiceDO" />
+   </bean>
+ 
+   <!-- healthCare Invoice Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.invoiceDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare License object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.licenseDOImpl" >
+   		<property name="licenseDO" ref="licenseDO" />
+   </bean>
+ 
+   <!-- healthCare License Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.licenseDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare Order Details object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.order_DetailsDOImpl" >
+   		<property name="order_DetailsDO" ref="order_DetailsDO" />
+   </bean>
+ 
+   <!-- healthCare Order Details Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.order_DetailsDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+
+   <!-- healthCare Product object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.productDOImpl" >
+   		<property name="productDO" ref="productDO" />
+   </bean>
+ 
+   <!-- healthCare Product Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.productDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare Profit Sale Monthly object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.profit_sale_monthlyDOImpl" >
+   		<property name="profit_sale_monthlyDO" ref="profit_sale_monthlyDO" />
+   </bean>
+ 
+   <!-- healthCare Profit Sale Monthly Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.profit_sale_monthlyDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+    <!-- healthCare Profit Sale Yearly object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.profit_sale_yearlyDOImpl" >
+   		<property name="profit_saleyearlyDO" ref="profit_saleyearlyDO" />
+   </bean>
+ 
+   <!-- healthCare Profit Sale Yearly Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.profit_sale_yearlyDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare Role object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.roleDOImpl" >
+   		<property name="roleDO" ref="roleDO" />
+   </bean>
+ 
+   <!-- healthCare Role Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.roleDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare Site object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.siteDOImpl" >
+   		<property name="siteDO" ref="siteDO" />
+   </bean>
+ 
+   <!-- healthCare Site Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.siteDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   <!-- healthCare Total Amount object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.total_amountDOImpl" >
+   		<property name="total_amountDO" ref="total_amountDO" />
+   </bean>
+ 
+   <!-- healthCare Total Amount Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.total_amountDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   
+   
+   <!-- healthCare User Role object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.user_roleDOImpl" >
+   		<property name="user_roleDP" ref="user_roleDP" />
+   </bean>
+ 
+   <!-- healthCare User Role Data Access Object -->
+   <bean id="healthCare" class="com.healthCare.dataObject.impl.user_roleDOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
    		
 </beans>
